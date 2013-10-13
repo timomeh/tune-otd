@@ -28,7 +28,7 @@ You can use a few functions to get your data in the Template:
 * `template_folder()`: Outputs the Folder of your Template for things like URL to Stylesheet and stuff.
 
 __Why does it iterate at the start of have_tunes()?__
-You can start with calling the newest Song out of your list and theme it a bit bigger, because it's more important, I think. Then loop through the other tunes.
+You can start with calling the newest Song out of your list before looping them all. For example theme it a bit bigger, because it's more important, I think. Then loop through the other tunes.
 
 I made a first template called `schmosby`. It's already there, self-explanatory and has all the available functions in it.
 
