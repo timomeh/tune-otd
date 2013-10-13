@@ -1,0 +1,51 @@
+h1 {
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 50px;
+	color: $darkish;
+}
+
+.git-badge {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+
+.main {
+	width: 500px;
+	border-bottom: 1px solid lighten($darkish, 30);
+	margin: 0 auto;
+	padding: 0 50px 70px 50px;
+	margin-bottom: 70px;
+	@include box-sizing(border-box);
+
+	.time {
+		margin-bottom: 30px;
+		font-size: 15px;
+		text-align: center;
+	}
+}
+
+.list {
+	width: 500px;
+	margin: 0 auto;
+	padding: 0 50px;
+	@include box-sizing(border-box);
+
+	iframe {
+		margin-bottom: 35px;
+	}
+
+	.time {
+		font-size: 13px;
+		text-align: left;
+		margin-bottom: 5px;
+	}
+}
+
+.time {
+	display: block;
+	color: $darkish;
+	font-style: italic;
+}
