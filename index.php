@@ -49,7 +49,7 @@ function tune_uri() {
 /**
  * Get the Date of your great tune.
  */
-function tune_date($format) {
+function tune_date($format = 'j. F Y – H:i') {
 	global $iterator;
 	$it = $iterator->current();
 	$date = date_create($it['date']);
