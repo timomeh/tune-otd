@@ -1,64 +1,10 @@
 <?php
 
-/**
- * A fairly simple file. Just get the JSON,
- * parse it and put the Tunes into an ArrayObject
- * with a cute Iterator.
- */
+// Retreive data from JSON
+include 'core/data.php';
 
-$data = file_get_contents("data.json");
-$decode = json_decode($data, true);
-$tunes = $decode["tunes"];
-usort($tunes, "sortByDate");
-$template = $decode["template"];
+// Declare functions for templates
+include 'core/func.template.php';
 
-$tunesAO = new ArrayObject($tunes);
-$iterator = $tunesAO->getIterator();
-
-/**
- * Sort Array by date, so you don't have to sort your JSON.
- * Nothing much to say.
- */
-function sortByDate( $a, $b ) {
-    return strtotime($b["date"]) - strtotime($a["date"]);
-}
-
-/**
- * Are any more tunes in JSON?
- * That would be great.
- */
-function have_tunes() {
-	global $iterator;
-	$iterator->next();
-	return $iterator->valid();
-}
-
-/**
- * Get the Spotify URI of your great tune.
- */
-function tune_uri() {
-	global $iterator;
-	$it = $iterator->current();
-	echo $it['uri'];
-}
-
-/**
- * Get the Date of your great tune.
- */
-function tune_date($format = 'j. F Y – H:i') {
-	global $iterator;
-	$it = $iterator->current();
-	$date = date_create($it['date']);
-	echo date_format($date, $format);
-}
-
-/**
- * Get the Folder of your great template.
- */
-function template_folder() {
-	global $template;
-	echo 'template/'.$template.'/';
-}
-
-// Simply includes your template. That's it.
+// Include your template. That's it.
 include 'template/'.$template.'/index.php';

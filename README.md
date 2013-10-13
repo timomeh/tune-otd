@@ -23,18 +23,16 @@ __IMA PRO:__ You can set the File Permissions from `data.json` to something like
 ## Can I theme it?
 
 Oh yes! Theming is a bit like in WordPress. Create a new Folder in `template` with an `index.php`  and put your HTML in it. If you're ready change the value of `template` in the `data.json` to the name of your Template (the name of the folder).
-You can find the HTML for the Play Button [here](https://developer.spotify.com/technologies/widgets/spotify-play-button/).
 
-You can use a few functions to get your data in the Template:
+You can use a few functions to get your data in the template:
 
 * `tune_uri()`: Outputs the URI of the Spotify Song.
 * `tune_date($format)`: Outputs the Date. As `$format` you can use any valid date-Format you like.
-* `have_tunes()`: Returns `true`, if there is another song in your list. Perfect for `while(have_tunes())`. It also sets the Iterator to the next element.
+* `first_tune()`: Returns `true` if current tune is newest.
 * `template_folder()`: Outputs the Folder of your Template for things like URL to Stylesheet and stuff.
+* `next_tune()`: Sets Iterator to next tune. Use it at the end of your while-Loop.
+* `have_tunes()`: Returns `true`, if there is another song in your list. Perfect for `while(have_tunes())`.
 
-__Why does it iterate at the start of have_tunes()?__
-You can start with calling the newest Song out of your list before looping them all. For example theme it a bit bigger, because it's more important, I think. Then loop through the other tunes.
-
-I made a first template called `schmosby`. It's already there, self-explanatory and has all the available functions in it.
+You can find the HTML for the Play Button [here](https://developer.spotify.com/technologies/widgets/spotify-play-button/). I made a first template called `schmosby`. It's already there, self-explanatory and has all the available functions in it.
 
 __So, why are you waiting?__
