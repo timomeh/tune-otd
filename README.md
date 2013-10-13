@@ -5,7 +5,7 @@ Ever wanted to share your tune of the day and have them all nicely listed withou
 
 ## Can you be a bit more specific?
 
-This little thingy displays your Tunes as __Spotify Play Buttons__ in a chronological order. The Core is a pretty simple nooby PHP-File. Yeah, the `index.php` in the root. But you don't have to care about it. The PHP-File gets your Tunes from the `data.json`.
+This little thingy displays your Tunes as __Spotify Play Buttons__ in a chronological order. You don't need a SQL-Database ans Stuff, it's all located in a JSON. The Core is pretty simple and nooby PHP-Stuff.
 
 ## Show me how it looks like
 
@@ -13,12 +13,17 @@ This little thingy displays your Tunes as __Spotify Play Buttons__ in a chronolo
 
 ## What do I have to do?
 
-Edit the `data.json` and add some Tunes to it. You need the Spotify URI and a Date. You can copy the URI from the Spotify Desktop client.
-![Get the Spotify URI](http://verwebbt.de/files/spotify_uri.jpg)
+1. Change the Path in `add/.htaccess` to your serverpath.
+2. Change the Username & Password in `add/.htpasswd`. Use something like [this](http://www.htaccesstools.com/htpasswd-generator/). Later you can add tunes in this area. Default Username and Password is `me`.
+3. Edit the default Songs from the `data.json` and add some of yours to it. It's pretty self-explanatory.
+4. You pushed it to your Server? Great, you're done.
 
-It's pretty self-explanatory. If you're done, just put the files to your Server and you're good to go.
+__IM A PRO:__ You can set the File Permissions from `data.json` to something like 0600. So PHP can read and edit the file but nobody can call the JSON with a normal HTTP-Request.
 
-__IMA PRO:__ You can set the File Permissions from `data.json` to something like 0600. So PHP can read the file but nobody can call the JSON with a normal HTTP-Request.
+## Adding Tunes
+
+Of course you can edit the `data.json` directly. But who wants to edit this file every day?
+Just call `http://your-fancy-domain.com/add/?[insert spotify uri]` and you've updated your tracks. 
 
 ## Can I theme it?
 
