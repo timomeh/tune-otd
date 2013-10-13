@@ -17,7 +17,7 @@ Edit the `data.json` and add some Tunes to it. It's pretty self-explanatory. Jus
 
 ## Can I theme it?
 
-Oh yes! Theming is a bit like in WordPress. Create a new Folder in `template` and put your HTML in it. If you're ready change the value of `template` in the `data.json`.
+Oh yes! Theming is a bit like in WordPress. Create a new Folder in `template` with an `index.php`  and put your HTML in it. If you're ready change the value of `template` in the `data.json` to the name of your Template (the name of the folder).
 You can find the HTML for the Play Button [here](https://developer.spotify.com/technologies/widgets/spotify-play-button/).
 
 You can use a few functions to get your data in the Template:
