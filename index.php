@@ -15,6 +15,8 @@ $template = $decode["template"];
 $tunesAO = new ArrayObject($tunes);
 $iterator = $tunesAO->getIterator();
 
+echo "hi";
+
 /**
  * Sort Array by date, so you don't have to sort your JSON.
  * Nothing much to say.
@@ -42,7 +44,8 @@ function have_tunes() {
  */
 function tune_uri() {
 	global $iterator;
-	echo $iterator->current()['uri'];
+	$it = $iterator->current();
+	echo $it['uri'];
 }
 
 /**
@@ -50,7 +53,8 @@ function tune_uri() {
  */
 function tune_date($format) {
 	global $iterator;
-	$date = date_create($iterator->current()['date']);
+	$it = $iterator->current();
+	$date = date_create($it['date']);
 	echo date_format($date, $format);
 }
 
