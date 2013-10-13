@@ -1,3 +1,5 @@
-AuthUserFile /Applications/MAMP/htdocs/tune-otd/.htpasswd
+AuthUserFile /Applications/MAMP/htdocs/tune-otd/add/.htpasswd
 AuthType Basic
 AuthName "Add URI to Tunes"
+
+require valid-user
