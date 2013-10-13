@@ -15,6 +15,8 @@ This little thingy displays your Tunes as __Spotify Play Buttons__ in a chronolo
 
 Edit the `data.json` and add some Tunes to it. It's pretty self-explanatory. Just put the files to your Server and you're good to go.
 
+__IMA PRO:__ You can set the File Permissions from `data.json` to something like 0600. So PHP can read the file but nobody can call the JSON with a normal HTTP-Request.
+
 ## Can I theme it?
 
 Oh yes! Theming is a bit like in WordPress. Create a new Folder in `template` with an `index.php`  and put your HTML in it. If you're ready change the value of `template` in the `data.json` to the name of your Template (the name of the folder).
