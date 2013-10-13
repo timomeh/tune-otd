@@ -13,7 +13,10 @@ This little thingy displays your Tunes as __Spotify Play Buttons__ in a chronolo
 
 ## What do I have to do?
 
-Edit the `data.json` and add some Tunes to it. It's pretty self-explanatory. Just put the files to your Server and you're good to go.
+Edit the `data.json` and add some Tunes to it. You need the Spotify URI and a Date. You can copy the URI from the Spotify Desktop client.
+![Get the Spotify URI](http://verwebbt.de/files/spotify_uri.jpg)
+
+It's pretty self-explanatory. If you're done, just put the files to your Server and you're good to go.
 
 __IMA PRO:__ You can set the File Permissions from `data.json` to something like 0600. So PHP can read the file but nobody can call the JSON with a normal HTTP-Request.
 
