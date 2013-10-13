@@ -1,0 +1,21 @@
+{
+	"tunes": [
+		{
+			"date": "2013-10-13 04:52",
+			"_date_comment": "The Date of your Tune. Use any valid format, i prefer Y-m-d H:i",
+			"uri": "spotify:track:1YplKY2G8yN0bWf8rM5Egz",
+			"_uri_comment": "The URI of your Song like spotify:track:1YplKY2G8yN0bWf8rM5Egz"
+		},
+		{
+			"date": "2013-10-12 23:01",
+			"uri": "spotify:track:36zOxv78LFIv4MnkEZVFxk"
+		},
+		{
+			"date": "2013-09-13 20:13",
+			"uri": "spotify:track:2kH3vHmSISetJYKgCcU7OE"
+		}
+	],
+
+	"template": "schmosby",
+	"_template_comment": "The Template you wish to use. Has to be a folder in /template with an index.php in it."
+}
