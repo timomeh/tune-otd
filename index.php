@@ -30,10 +30,7 @@ function sortByDate( $a, $b ) {
 function have_tunes() {
 	global $iterator;
 	$iterator->next();
-	if($iterator->valid())
-		return true;
-	else
-		return false;
+	return $iterator->valid();
 }
 
 /**
