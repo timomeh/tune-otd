@@ -25,6 +25,9 @@ __IM A PRO:__ You can set the File Permissions from `data.json` to something lik
 Of course you can edit the `data.json` directly. But who wants to edit this file every day?
 Just call `http://your-fancy-domain.com/add/?[insert spotify uri]` and you've updated your tracks. 
 
+You can copy the URI from the Spotify Desktop client.
+![Get the Spotify URI](http://verwebbt.de/files/spotify_uri.jpg)
+
 ## Can I theme it?
 
 Oh yes! Theming is a bit like in WordPress. Create a new Folder in `template` with an `index.php`  and put your HTML in it. If you're ready change the value of `template` in the `data.json` to the name of your Template (the name of the folder).
