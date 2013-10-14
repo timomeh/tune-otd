@@ -35,9 +35,12 @@ Oh yes! Theming is a bit like in WordPress. Create a new Folder in `template` wi
 You can use a few functions to get your data in the template:
 
 * `tune_uri()`: Outputs the URI of the Spotify Song.
-* `tune_date($format)`: Outputs the Date. As `$format` you can use any valid date-Format you like.
+* `get_tune_uri()`: Returns the URI.
+* `tune_date($format)`: Outputs the Date. As `$format` you can use any valid date-Format you like. Default is `j. F Y – H:i`.
+* `get_tune_date($format)`: Returns the Date.
+* `template_folder()`: Outputs the Directory of your Template (Location of Template index.php) for things like URL to Stylesheet and stuff.
+* `get_template_folder()`: Gets the Directory of your Template.
 * `first_tune()`: Returns `true` if current tune is newest.
-* `template_folder()`: Outputs the Folder of your Template for things like URL to Stylesheet and stuff.
 * `next_tune()`: Sets Iterator to next tune. Use it at the end of your while-Loop.
 * `have_tunes()`: Returns `true`, if there is another song in your list. Perfect for `while(have_tunes())`.
 
