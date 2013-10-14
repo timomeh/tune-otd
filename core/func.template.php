@@ -36,6 +36,15 @@ function tune_uri() {
 }
 
 /**
+ * Return the Spotify URI of your great tune.
+ */
+function get_tune_uri() {
+	global $iterator;
+	$it = $iterator->current();
+	return $it['uri'];
+}
+
+/**
  * Get the Date of your great tune.
  */
 function tune_date($format = 'j. F Y – H:i') {
@@ -46,9 +55,27 @@ function tune_date($format = 'j. F Y – H:i') {
 }
 
 /**
+ * Return the Date of your great tune.
+ */
+function get_tune_date($format = 'j. F Y – H:i') {
+	global $iterator;
+	$it = $iterator->current();
+	$date = date_create($it['date']);
+	return date_format($date, $format);
+}
+
+/**
  * Get the Folder of your great template.
  */
 function template_folder() {
 	global $template;
 	echo 'template/'.$template.'/';
+}
+
+/**
+ * Return the Folder of your great template.
+ */
+function get_template_folder() {
+	global $template;
+	return 'template/'.$template.'/';
 }
