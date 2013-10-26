@@ -11,15 +11,18 @@
 	<a href="https://github.com/verwebbt/tune-otd"><img class="git-badge" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 	<h1>Tune of the day</h1>
 
+<?php while(have_tunes()): ?>
+<?php if(first_tune()): ?>
 	<section class="main">
 		<time class="time" datetime="<?php tune_date('Y-m-d H:i'); ?>" pubdate><?php tune_date('j. F Y – H:i'); ?></time>
 		<iframe src="https://embed.spotify.com/?uri=<?php tune_uri(); ?>" width="400" height="480" frameborder="0" allowtransparency="true"></iframe>
 	</section>
-
 	<section class="list">
-<?php while(have_tunes()): ?>
+<?php else: ?>
 		<time class="time" datetime="<?php tune_date('Y-m-d H:i'); ?>" pubdate><?php tune_date('j. F Y – H:i'); ?></time>
 		<iframe src="https://embed.spotify.com/?uri=<?php tune_uri(); ?>" width="400" height="80" frameborder="0" allowtransparency="true"></iframe>
+<?php endif; ?>
+<?php next_tune(); ?>
 <?php endwhile; ?>
 	</section>
 

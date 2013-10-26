@@ -16,6 +16,8 @@
 		}
 	],
 
+	"path": "http://localhost:8888/tune-otd/",
+	"_path_comment": "Full URL to home directory",
 	"template": "schmosby",
 	"_template_comment": "The Template you wish to use. Has to be a folder in /template with an index.php in it."
 }

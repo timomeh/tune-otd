@@ -6,6 +6,7 @@ Ever wanted to share your tune of the day and have them all nicely listed withou
 ## Can you be a bit more specific?
 
 This little thingy displays your Tunes as __Spotify Play Buttons__ in a chronological order. You don't need a SQL-Database and Stuff, it's all located in a JSON. The Core is pretty simple and nooby PHP-Stuff.
+Adding ´/add´ to your URL will display all Tunes in a playlist.
 
 ## Show me how it looks like
 
@@ -31,15 +32,20 @@ You can copy the URI from the Spotify Desktop client.
 ## Can I theme it?
 
 Oh yes! Theming is a bit like in WordPress. Create a new Folder in `template` with an `index.php`  and put your HTML in it. If you're ready change the value of `template` in the `data.json` to the name of your Template (the name of the folder).
+Also you have to create a `all.php`, where your Songs are displayed in a playlist.
 
 You can use a few functions to get your data in the template:
 
 * `tune_uri()`: Outputs the URI of the Spotify Song.
 * `get_tune_uri()`: Returns the URI.
+* `all_tune_uri()`: Outputs the URI of all Spotify Song separated by a comma.
+* `get_all_tune_uri()`: Returns the URI of all Spotify Song separated by a comma.
 * `tune_date($format)`: Outputs the Date. As `$format` you can use any valid date-Format you like. Default is `j. F Y – H:i`.
 * `get_tune_date($format)`: Returns the Date.
 * `template_folder()`: Outputs the Directory of your Template (Location of Template index.php) for things like URL to Stylesheet and stuff.
 * `get_template_folder()`: Gets the Directory of your Template.
+* `home_url()`: Outputs the URL to home out of the json.
+* `get_home_url()`: Returns the URL to home out of the json.
 * `first_tune()`: Returns `true` if current tune is newest.
 * `next_tune()`: Sets Iterator to next tune. Use it at the end of your while-Loop.
 * `have_tunes()`: Returns `true`, if there is another song in your list. Perfect for `while(have_tunes())`.
