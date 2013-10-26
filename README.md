@@ -6,7 +6,7 @@ Ever wanted to share your tune of the day and have them all nicely listed withou
 ## Can you be a bit more specific?
 
 This little thingy displays your Tunes as __Spotify Play Buttons__ in a chronological order. You don't need a SQL-Database and Stuff, it's all located in a JSON. The Core is pretty simple and nooby PHP-Stuff.
-Adding ´/add´ to your URL will display all Tunes in a playlist.
+Adding `/add` to your URL will display all Tunes in a playlist.
 
 ## Show me how it looks like
 
